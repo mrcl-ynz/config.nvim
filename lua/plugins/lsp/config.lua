@@ -20,6 +20,9 @@ local on_attach = function(_, bufnr)
     end)
 end
 
+local ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+local capabilities = ok and cmp_lsp.default_capabilities() or {}
+
 require("mason-lspconfig").setup({
     ensure_installed = vim.tbl_keys(servers),
     handlers = {
@@ -27,6 +30,7 @@ require("mason-lspconfig").setup({
             require("lspconfig")[server_name].setup({
                 settings = servers[server_name],
                 on_attach = on_attach,
+                capabilities = capabilities,
             })
         end
     }
