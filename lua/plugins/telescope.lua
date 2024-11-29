@@ -1,7 +1,7 @@
 local keymaps = {
-    { "<leader>ff", "find_files", desc = "Telescope: find files" },
-    { "<leader>fg", "live_grep", desc = "Telescope: live grep" },
-    { "<leader>fh", "help_tags", desc = "Telescope: help tags" },
+    { "<Leader>ff", "find_files", desc = "Telescope: find files" },
+    { "<Leader>fg", "live_grep", desc = "Telescope: live grep" },
+    { "<Leader>fh", "help_tags", desc = "Telescope: help tags" },
 }
 
 return {
