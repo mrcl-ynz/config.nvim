@@ -8,7 +8,7 @@ if not vim.uv.fs_stat(lazypath) then
         "--filter=blob:none",
         "--branch=stable",
         "https://github.com/folke/lazy.nvim.git",
-        lazypath
+        lazypath,
     }):wait()
     if out.code ~= 0 then
         vim.api.nvim_echo({
