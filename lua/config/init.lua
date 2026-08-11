@@ -14,3 +14,5 @@ vim.iter(keymap_config.mappings):each(
         })
     end
 )
+
+require("config.pack"):setup("custom.plugins")
